@@ -3,37 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Temporary Email Service</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" disabled>
-        <div class="buttons">
-            <button class="btn" onclick="clearDisplay()">C</button>
-            <button class="btn" onclick="appendCharacter('/')">/</button>
-            <button class="btn" onclick="appendCharacter('*')">*</button>
-            <button class="btn" onclick="deleteLast()">DEL</button>
+    <div class="container">
+        <h2>Temporary Email Generator</h2>
+        <button onclick="generateEmail()">Generate Email</button>
 
-            <button class="btn" onclick="appendCharacter('7')">7</button>
-            <button class="btn" onclick="appendCharacter('8')">8</button>
-            <button class="btn" onclick="appendCharacter('9')">9</button>
-            <button class="btn" onclick="appendCharacter('-')">-</button>
+        <h3>Your Temporary Email:</h3>
+        <p id="generated-email"></p>
+        <button onclick="checkInbox()">Check Inbox</button>
 
-            <button class="btn" onclick="appendCharacter('4')">4</button>
-            <button class="btn" onclick="appendCharacter('5')">5</button>
-            <button class="btn" onclick="appendCharacter('6')">6</button>
-            <button class="btn" onclick="appendCharacter('+')">+</button>
-
-            <button class="btn" onclick="appendCharacter('1')">1</button>
-            <button class="btn" onclick="appendCharacter('2')">2</button>
-            <button class="btn" onclick="appendCharacter('3')">3</button>
-            <button class="btn equal-btn" onclick="calculateResult()">=</button>
-
-            <button class="btn zero" onclick="appendCharacter('0')">0</button>
-            <button class="btn" onclick="appendCharacter('.')">.</button>
+        <h3>Inbox:</h3>
+        <div id="inbox">
+            <p>No new emails.</p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
